@@ -4,6 +4,9 @@
             <div>
                 <h1>Builds</h1>
                 <hr><br>
+                <button type="button">Show In-Game Icons</button>
+                <button type="button">Rotate Display</button>
+                <button type="button">Hide Unused</button>
                 <button type="button">Copy link to build</button>
                 <br><br>
                 <table>
