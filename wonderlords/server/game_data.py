@@ -18,6 +18,7 @@ alliances_json = {k.lower(): v for (k, v) in alliances_json.items()}
 heroes = []
 classes = []
 races = []
+hero_matrix = []
 
 # Add to lists
 for hero, attributes in heroes_json.items():
@@ -36,6 +37,27 @@ for hero, attributes in heroes_json.items():
             if alliances_json[alliance]['type'] == 'Race':
                 races.append(alliance)
 
+# Sort Lists
 heroes.sort(key=str.lower)
 classes.sort(key=str.lower)
 races.sort(key=str.lower)
+
+
+# Build Hero Matrix
+def build_hero_matrix():
+
+    hero_matrix = []
+
+    for hero, attributes in heroes_json.items():
+
+        # Only add if unit is playable
+        if attributes['draftTier'] > 0:
+
+            keywords = attributes['keywords'].split()
+            unit_classes = classes.index(keywords[0])
+            unit_races = races.index()
+
+            try:
+                hero_matrix[0][0] += [0]
+            except ValueError:
+                pass

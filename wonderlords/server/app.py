@@ -1,7 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 
-from game_json import heroes, classes, races
+from game_data import heroes, hero_matrix, classes, races
 
 # instantiate app
 app = Flask(__name__)
@@ -14,6 +14,11 @@ CORS(app, resources={r'/*': {'origins': '*'}})
 @app.route('/heroes', methods=['GET'])
 def get_heroes():
     return jsonify(heroes)
+
+
+@app.route('/hero_matrix', methods=['GET'])
+def get_hero_matrix():
+    return jsonify(hero_matrix)
 
 
 @app.route('/classes', methods=['GET'])
