@@ -92,11 +92,20 @@ export default {
 <style>
 table {
     background: rgba(80,80,80,0.4);
+    border-collapse: collapse;
 }
+
+tr {
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
 td {
-    max-width: 180px;
-    max-height: 180px;
-    margin: 1px;
+    border-spacing: 0;
+    max-width: 80px;
+    max-height: 80px;
+    margin: 0;
     padding: 0;
 }
 </style>
